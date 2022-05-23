@@ -11,7 +11,6 @@ let player2Score = 0
 let player1Turn = true
 
  if (Math.floor(Math.random()*2) === 0) {
-    titleTxt.style.color = "green"
     player1Turn = true
     titleTxt.textContent = "Player 1 starts"
  } else {
@@ -19,6 +18,7 @@ let player1Turn = true
     titleTxt.textContent = "Player 2 starts"
  }
 
+titleTxt.style.color = "green"
 resetBtn.classList.add("buttonHide")
 
 resetBtn.addEventListener("click", function() {
