@@ -11,6 +11,7 @@ let player2Score = 0
 let player1Turn = true
 
  if (Math.floor(Math.random()*2) === 0) {
+    titleTxt.style.color = "green"
     player1Turn = true
     titleTxt.textContent = "Player 1 starts"
  } else {
@@ -32,15 +33,32 @@ function showResetButton() {
 }
 
 rollBtn.addEventListener("click", function() {
-    let diceValue = Math.floor(Math.random()*6)+1
+    titleTxt.style.color = "black"
+    const diceValue = Math.floor(Math.random()*6)+1
+    let diceValueChar = ""
+    if (diceValue === 1) {
+        diceValueChar = "one"
+    } else if (diceValue === 2) {
+        diceValueChar = "two"
+    } else if (diceValue === 3) {
+        diceValueChar = "three"
+    } else if (diceValue === 4) {
+        diceValueChar = "four"
+    } else if (diceValue === 5) {
+        diceValueChar = "five"
+    } else {
+        diceValueChar = "six"
+    }
+
+
     if (player1Turn) {
-        dice1.textContent = diceValue
+        dice1.innerHTML = `<i class="fa-solid fa-dice-${diceValueChar}"></i>` 
         player1Score += diceValue
         scoreBoard1.textContent = player1Score
         player1Turn = false
         titleTxt.textContent = "Player 2 turn"
     } else {
-        dice2.textContent = diceValue
+        dice2.innerHTML = `<i class="fa-solid fa-dice-${diceValueChar}"></i>` 
         player2Score += diceValue
         scoreBoard2.textContent = player2Score
         player1Turn = true

@@ -8,7 +8,8 @@ body {
 
 .container {
     padding:50px;
-    width: 500px;
+    max-width: 500px;
+    width: 90%;
     margin: 50px auto 0;
     background-color: #fff;
     border-radius:10px;
@@ -32,17 +33,14 @@ h1{
     justify-content: space-evenly;
 }
 .diceContainer {
-    width: 90px;
-    height: 90px;
-    background-color:antiquewhite;
-    border-radius:10px;
-    box-shadow: 10px 10px 10px grey;
     margin: 0 auto;
 }
 .dice {
-    font-size: 40px;
+    margin:0;
+    font-size: 110px;
     font-weight: bold;
     line-height: 90px;
+    text-shadow: 3px 3px 5px grey;
 }
 .btn {
     font-size: 40px;
