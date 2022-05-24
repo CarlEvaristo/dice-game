@@ -75,13 +75,17 @@ rollBtn.addEventListener("click", function() {
     }
 
     if ((player1Score >= 20) & (player2Score < 20)) {
-        titleTxt.textContent = "Player 1 wins!"
-        titleTxt.style.color = "green"
-        showResetButton()
+        setTimeout( function() {
+            titleTxt.textContent = "Player 1 wins!"
+            titleTxt.style.color = "green"
+            showResetButton()
+            }, 1000)
     } else if ((player1Score < 20) & (player2Score >= 20)) {
-        titleTxt.textContent = "Player 2 wins!"
-        titleTxt.style.color = "green"
-        showResetButton()
+        setTimeout( function() {
+            titleTxt.textContent = "Player 2 wins!"
+            titleTxt.style.color = "green"
+            showResetButton()
+            }, 1000)
     }
 })
 
