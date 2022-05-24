@@ -23,7 +23,7 @@ h1{
     font-size: 50px;
 }
 .subtitle {
-    margin-top: 25px;
+    margin: 40px 0;
     font-size: 25px;
     font-weight: bold;
 }
@@ -91,4 +91,10 @@ h1{
     100% {
         opacity: 1;
     }
+}
+#score1, #score2 {
+    background: lightyellow;
+    padding:5px 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px lightgrey;
 }
