@@ -50,19 +50,28 @@ rollBtn.addEventListener("click", function() {
         diceValueChar = "six"
     }
 
-
     if (player1Turn) {
         dice1.innerHTML = `<i class="fa-solid fa-dice-${diceValueChar}"></i>` 
-        player1Score += diceValue
-        scoreBoard1.textContent = player1Score
         player1Turn = false
         titleTxt.textContent = "Player 2 turn"
+        dice2.classList.remove("active-dice")
+        dice1.classList.add("active-dice")
+        player1Score += diceValue
+
+        setTimeout( function() {
+            scoreBoard1.textContent = player1Score
+            }, 1000)
     } else {
         dice2.innerHTML = `<i class="fa-solid fa-dice-${diceValueChar}"></i>` 
-        player2Score += diceValue
-        scoreBoard2.textContent = player2Score
         player1Turn = true
         titleTxt.textContent = "Player 1 turn"
+        dice1.classList.remove("active-dice")
+        dice2.classList.add("active-dice")
+        player2Score += diceValue
+
+        setTimeout( function() {
+            scoreBoard2.textContent = player2Score
+            }, 1000)
     }
 
     if ((player1Score >= 20) & (player2Score < 20)) {
