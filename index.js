@@ -51,6 +51,7 @@ rollBtn.addEventListener("click", function() {
     }
 
     if (player1Turn) {
+        titleTxt.textContent = "..."
         dice1.innerHTML = `<i class="fa-solid fa-dice-${diceValueChar}"></i>` 
         player1Turn = false
         dice2.classList.remove("active-dice")
@@ -62,6 +63,7 @@ rollBtn.addEventListener("click", function() {
             titleTxt.textContent = "Player 2 turn"
             }, 1000)
     } else {
+        titleTxt.textContent = "..."
         dice2.innerHTML = `<i class="fa-solid fa-dice-${diceValueChar}"></i>` 
         player1Turn = true
         dice1.classList.remove("active-dice")
